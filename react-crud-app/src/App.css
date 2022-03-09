@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap");
+
+* {
+  background-color: #282c34;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #212121;
+  color: whitesmoke;
+  flex-direction: column;
+}
+
+.main-header {
+  font-family: "Arimo", sans-serif;
+}
+
+.create-form {
+  height: 40vh;
+  width: 30vw;
+}
+
+.create-form label {
+  color: whitesmoke !important;
+  font-family: "Arimo", sans-serif;
+  font-size: medium !important;
+  margin: 1rem;
+}
+
+.create-form input {
+  background-color: white;
+  margin: 1rem;
+}
+.create-form button {
+  background-color: white;
+  display: block;
+  margin: 0 auto;
+}
