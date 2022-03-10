@@ -1,19 +1,24 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Button, Checkbox, Form } from "semantic-ui-react";
 
 const Update = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [checkbox, setCheckbox] = useState(false);
+
   const [id, setId] = useState(null);
 
   useEffect(() => {
     setId(localStorage.getItem("ID"));
     setFirstName(localStorage.getItem("First Name"));
     setLastName(localStorage.getItem("Last Name"));
+
+    //let newCheckboxValue = Boolean(localStorage.getItem("Checkbox Value"));
+    //console.log(newCheckboxValue);
     setCheckbox(localStorage.getItem("Checkbox Value"));
-  });
+  }, []);
 
   const updateAPIData = () => {
     axios.put(`https://6228ee829fd6174ca833f4d0.mockapi.io/fakeData/${id}`, {
@@ -50,9 +55,11 @@ const Update = () => {
             onChange={(e) => setCheckbox(!checkbox)}
           />
         </Form.Field>
-        <Button type="submit" onClick={updateAPIData}>
-          Update
-        </Button>
+        <Link to="/read">
+          <Button type="submit" onClick={updateAPIData}>
+            Update
+          </Button>
+        </Link>
       </Form>
     </div>
   );

@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Button, Checkbox, Form } from "semantic-ui-react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Create = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [checkbox, setCheckbox] = useState(false);
+
+  let navigate = useNavigate();
   const postData = () => {
     //console.log(firstName, lastName, checkbox);
     axios.post("https://6228ee829fd6174ca833f4d0.mockapi.io/fakeData", {
@@ -38,9 +42,11 @@ const Create = () => {
             onChange={(e) => setCheckbox(!checkbox)}
           />
         </Form.Field>
-        <Button type="submit" onClick={postData}>
-          Submit
-        </Button>
+        <Link to="/read">
+          <Button type="submit" onClick={postData}>
+            Submit
+          </Button>
+        </Link>
       </Form>
     </div>
   );

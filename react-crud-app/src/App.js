@@ -9,6 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route exact path="/" element={<Create />} />
         <Route exact path="/create" element={<Create />} />
         <Route exact path="/read" element={<Read />} />
         <Route exact path="/update" element={<Update />} />

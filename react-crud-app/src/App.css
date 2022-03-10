@@ -1,21 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap");
 
-* {
-  background-color: #282c34;
-}
-
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #212121;
-  color: whitesmoke;
+  color: white;
   flex-direction: column;
 }
 
 .main-header {
   font-family: "Arimo", sans-serif;
+}
+
+.read-form {
+  background-color: white;
+  color: black;
+  padding: 1rem;
 }
 
 .create-form {
