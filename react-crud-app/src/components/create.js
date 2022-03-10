@@ -15,7 +15,8 @@ const Create = () => {
     });
   };
   return (
-    <div>
+    <div className="main">
+      <h2 className="main-header">React crud operations</h2>
       <Form className="create-form">
         <Form.Field>
           <label>First Name</label>
